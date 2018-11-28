@@ -1,0 +1,24 @@
+{
+  "contests": [
+    {
+      "id": 1,
+      "categoryName": "Business/Company",
+      "contestName": "Oil and Gas Economies"
+    },
+    {
+      "id": 2,
+      "categoryName": "Magazine/Newsletter",
+      "contestName": "Orienting people about Solar Energy"
+    },
+    {
+      "id": 3,
+      "categoryName": "Software Component",
+      "contestName": "Reasons why firms should embrace Remote work culture"
+    },
+    {
+      "id": 4,
+      "categoryName": "BootCamps/Design Agencies",
+      "contestName": "Programming courses with pay later option"
+    }
+  ]
+}
