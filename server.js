@@ -8,15 +8,14 @@ import chalk from 'chalk';
 const server = new express();
 
 server.use(logger('tiny'));
-server.use(express.static('public'));
-server.use('/api', apiRouter);
-
 server.set('view engine', 'ejs');
 
 server.get('/', (req, res) => {
-  res.send('Whow!, Hello Express and EJS');
+  res.render('index', { content: 'Whow!, Hello Express and EJS'});
 });
 
+server.use(express.static('public'));
+server.use('/api', apiRouter);
 
 server.listen(config.port, () => console.info(`Example app running on port ${chalk.green(config.port)}`));
 
