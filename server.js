@@ -3,9 +3,16 @@ import apiRouter from './api';
 import express from 'express';
 import logger from 'morgan';
 import chalk from 'chalk';
+import sassMiddleware from 'node-sass-middleware';
+import path from 'path';
 
 // Initialize the Express App
 const server = new express();
+
+server.use(sassMiddleware({
+  src: path.join(__dirname, 'sass'),
+  dest: path.join(__dirname, 'public')
+}));
 
 server.use(logger('tiny'));
 server.set('view engine', 'ejs');
